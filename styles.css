@@ -850,6 +850,14 @@
             font-size: 1.05rem;
         }
 
+        .general-email {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+        }
+
         .footer-links a:hover {
             opacity: 1;
             transform: translateX(5px);
