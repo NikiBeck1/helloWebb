@@ -75,7 +75,7 @@ document
    EMAILJS CONFIG
 ================================ */
 const EMAILJS_SERVICE_ID = 'service_3v1spb8';
-const EMAILJS_TEMPLATE_ID = 'template_qpdtdcc';
+const EMAILJS_TEMPLATE_ID = 'template_kd09924';
 
 function showSuccess() {
   const modalContent = document.querySelector('.modal-content');
@@ -112,7 +112,7 @@ contactForm.addEventListener('submit', async (e) => {
       email: contactForm.email.value,
       phone: contactForm.phone.value,
       business: contactForm.business.value,
-      Interest: contactForm.package.value,
+      package: contactForm.package.value,
       message: contactForm.message.value,
     });
 
