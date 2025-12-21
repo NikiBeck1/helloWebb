@@ -66,12 +66,9 @@
             align-items: center;
         }
 
-        .logo {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            text-decoration: none;
+        .logoImg {
+            height: 30px;
+            width: auto;
         }
 
         .nav-links {
@@ -1393,6 +1390,11 @@
 
         .mobile-menu-toggle {
             display: block;
+        }
+
+        .nav-container {
+            justify-content: center;
+            align-items: center;
         }
     }
 
