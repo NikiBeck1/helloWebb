@@ -1384,3 +1384,21 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+            display: none;
+        }     
+
+        .mobile-menu-toggle {
+            display: block;
+        }
+    }
+
+        /* Desktop */
+        @media (min-width: 769px) {
+        .mobile-menu-toggle {
+        display: none;
+        }
+        }
