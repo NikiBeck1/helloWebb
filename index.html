@@ -1,460 +1,452 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>helloWebb - Smart Websites That Work For You</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init({
-            publicKey: "GtuGLfzGBc7S14NXs",
-        });
-        })();
-    </script> 
-    <script nowprocket nitro-exclude type="text/javascript" id="sa-dynamic-optimization" data-uuid="e46a638e-d312-4b22-a2c7-4677ce23ca7a" src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vZGFzaGJvYXJkLnNlYXJjaGF0bGFzLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gImU0NmE2MzhlLWQzMTItNGIyMi1hMmM3LTQ2NzdjZTIzY2E3YSI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw=="></script>
-    <script src='https://www.noupe.com/embed/019b44149dcf789ba7fa3fe3c14354691fa8.js'></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>helloWebb — Fast, affordable websites in Birmingham, AL</title>
+<meta name="description" content="Professional websites and brands built fast with an AI-assisted process. Single-page sites from $200, multi-page sites $550. Birmingham, Alabama.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0E0E10;
+    --ink-2: #1A1A1F;
+    --line-dark: #2E2E36;
+    --muted: #44444C;
+    --muted-dark: #B8B8C2;
+    --soft: #F3F3F6;
+    --line: #E6E6EA;
+    --accent: #3D2BFF;
+    --lime: #D7FF3A;
+    --white: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--white); color: var(--ink); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: #2A1FD6; }
+  a:hover { color: #1A1291; }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 96px 0; }
+  .soft { background: var(--soft); }
+  .dark { background: var(--ink); color: var(--white); }
+  .display { font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.025em; }
+  .eyebrow { margin: 0; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  .dark .eyebrow { color: var(--lime); }
+  .h2 { margin: 0; font-size: clamp(32px, 4vw, 48px); line-height: 1.05; }
+  .lede { margin: 0; font-size: 18px; line-height: 1.6; color: var(--muted); }
+  .dark .lede { color: var(--muted-dark); }
+  .head { display: flex; flex-direction: column; gap: 14px; max-width: 740px; margin-bottom: 48px; }
+  .grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+  .btn { display: inline-block; text-decoration: none; font-weight: 600; font-size: 17px; padding: 16px 28px; border-radius: 999px; text-align: center; }
+  .btn-accent { background: var(--accent); color: var(--white); }
+  .btn-accent:hover { background: #2A1FD6; color: var(--white); }
+  .btn-outline { background: var(--white); color: var(--ink); border: 1px solid var(--ink); padding: 15px 27px; }
+  .btn-outline:hover { background: var(--ink); color: var(--white); }
+  .btn-white { background: var(--white); color: var(--ink); }
+  .btn-white:hover { background: var(--lime); color: var(--ink); }
+  .btn-ink { background: var(--ink); color: var(--white); }
+  .btn-ink:hover { background: #000; color: var(--white); }
+
+  /* Nav */
+  .nav { border-bottom: 1px solid var(--line); position: sticky; top: 0; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); z-index: 10; }
+  .nav .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px; }
+  .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+  .logo span { color: var(--accent); }
+  .nav nav { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500; }
+  .nav nav a { color: var(--ink); text-decoration: none; }
+  .nav nav a:hover { color: var(--accent); }
+  .nav nav .btn { font-size: 15px; padding: 12px 20px; }
+
+  /* Hero */
+  .hero { padding: 96px 0 88px; }
+  .hero .wrap { display: flex; flex-wrap: wrap; gap: 56px; align-items: center; }
+  .hero-copy { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
+  .pill { align-self: flex-start; background: var(--lime); color: var(--ink); font-weight: 600; font-size: 14px; padding: 8px 14px; border-radius: 999px; }
+  .hero h1 { margin: 0; font-size: clamp(44px, 6.4vw, 84px); line-height: .98; letter-spacing: -0.035em; }
+  .hero p { margin: 0; font-size: 20px; line-height: 1.55; color: var(--muted); max-width: 600px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .price-card { flex: 1 1 340px; min-width: 0; background: var(--ink); color: var(--white); border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 20px; }
+  .price-card .label { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-dark); }
+  .price-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 18px; }
+  .price-row + .price-row { border-top: 1px solid var(--line-dark); padding-top: 18px; }
+  .price-row strong { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 40px; color: var(--lime); }
+  .price-row em { font-style: normal; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 22px; }
+
+  /* Two ways */
+  .option { background: var(--white); border-radius: 20px; padding: 36px; display: flex; flex-direction: column; gap: 16px; }
+  .option h3 { margin: 0; font-size: 28px; }
+  .option p { margin: 0; font-size: 17px; line-height: 1.6; color: var(--muted); }
+  .option .best { font-size: 15px; border-top: 1px solid var(--line); padding-top: 16px; }
+  .option .best strong { color: var(--ink); }
+
+  /* Steps */
+  .steps { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .step { border-top: 3px solid var(--ink); padding-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+  .step span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; color: var(--accent); }
+  .step h3 { margin: 0; font-size: 21px; font-weight: 600; }
+  .step p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--muted); }
+
+  /* Pricing */
+  .tier { background: var(--ink-2); border: 1px solid var(--line-dark); border-radius: 20px; padding: 36px; display: flex; flex-direction: column; gap: 20px; }
+  .tier.featured { background: var(--accent); border-color: var(--accent); }
+  .tier-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .tier h3 { margin: 0; font-size: 22px; font-weight: 600; }
+  .tag { background: var(--lime); color: var(--ink); font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; }
+  .amount { margin: 0; font-size: 64px; line-height: 1; letter-spacing: -0.03em; }
+  .amount.sm { font-size: 44px; line-height: 1.1; }
+  .tier p.desc { margin: 0; font-size: 16px; line-height: 1.6; color: var(--muted-dark); }
+  .tier.featured p.desc { color: #E8E6FF; }
+  .tier ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.5; }
+  .tier .btn { margin-top: auto; font-size: 16px; padding: 15px 24px; }
+
+  /* Work */
+  .work-grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .work-card { text-decoration: none; color: var(--ink); display: flex; flex-direction: column; gap: 14px; }
+  .work-card:hover { color: var(--ink); }
+  .thumb { aspect-ratio: 4 / 3; background: var(--soft); border: 1px dashed var(--muted-dark); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #6B6B75; font-size: 14px; overflow: hidden; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .work-card h3 { margin: 0; font-size: 20px; font-weight: 600; }
+  .work-card p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--muted); }
+
+  /* About */
+  .about .wrap { display: flex; flex-wrap: wrap; gap: 48px; align-items: center; }
+  .photo { flex: 1 1 280px; max-width: 360px; aspect-ratio: 1 / 1; background: var(--line); border-radius: 24px; display: flex; align-items: center; justify-content: center; color: #6B6B75; font-size: 14px; overflow: hidden; }
+  .about-copy { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+  .about-copy h2 { margin: 0; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.08; }
+  .about-copy p { margin: 0; font-size: 18px; line-height: 1.65; color: var(--muted); }
+  .about-copy a { font-weight: 600; }
+
+  /* FAQ */
+  .faq { max-width: 880px; }
+  .faq details { border-top: 1px solid var(--line); padding: 22px 0; }
+  .faq details:last-child { border-bottom: 1px solid var(--line); }
+  .faq summary { cursor: pointer; list-style: none; font-size: 20px; font-weight: 600; display: flex; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: 'Space Grotesk', sans-serif; color: var(--accent); font-size: 26px; line-height: 1; }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { margin: 12px 0 0; font-size: 17px; line-height: 1.65; color: var(--muted); }
+
+  /* Contact */
+  .contact .wrap { display: flex; flex-wrap: wrap; gap: 56px; }
+  .contact-copy { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+  .contact-copy h2 { margin: 0; font-size: clamp(36px, 4.6vw, 56px); line-height: 1.02; letter-spacing: -0.03em; }
+  .contact-info { display: flex; flex-direction: column; gap: 8px; font-size: 17px; }
+  .contact-info a { color: var(--white); }
+  .contact-info span { color: var(--muted-dark); }
+  form { flex: 999 1 520px; min-width: 0; background: var(--ink-2); border-radius: 20px; padding: 32px; display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  form label { display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 500; }
+  form .full { grid-column: 1 / -1; }
+  input, select, textarea { font: inherit; font-size: 16px; padding: 14px; border-radius: 10px; border: 1px solid #3A3A44; background: var(--ink); color: var(--white); }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--lime); outline-offset: 1px; border-color: transparent; }
+  textarea { resize: vertical; }
+  form button { font: inherit; font-size: 17px; font-weight: 600; background: var(--lime); color: var(--ink); border: 0; border-radius: 999px; padding: 16px 28px; cursor: pointer; }
+  form button:hover { background: var(--white); }
+  footer { border-top: 1px solid var(--line-dark); }
+  footer .wrap { padding-top: 24px; padding-bottom: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--muted-dark); }
+
+  @media (max-width: 640px) {
+    .section { padding: 64px 0; }
+    .hero { padding: 56px 0 64px; }
+    .nav nav { gap: 16px; }
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init({ publicKey: "GtuGLfzGBc7S14NXs" });</script>
+<script nowprocket nitro-exclude type="text/javascript" id="sa-dynamic-optimization" data-uuid="e46a638e-d312-4b22-a2c7-4677ce23ca7a" src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vZGFzaGJvYXJkLnNlYXJjaGF0bGFzLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gImU0NmE2MzhlLWQzMTItNGIyMi1hMmM3LTQ2NzdjZTIzY2E3YSI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw=="></script>
+<script src="https://www.noupe.com/embed/019b44149dcf789ba7fa3fe3c14354691fa8.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <img src="./assets/helloWebbLOGO.png" alt="helloWebb Logo" class="logoImg">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
-                <li><a href="#contact" class="cta-button">Contact Us</a></li>
-            </ul>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#home">hello<span>Webb</span></a>
+    <nav aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#work">Work</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-ink" href="#contact">Start a project</a>
     </nav>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1><span style="font-style: italic;">Smart Websites</span> Do All The Work For You.</h1>
-                <p>We build AI-powered websites that automate SEO optimization, capture leads, manage client bookings, and handle the digital busywork—so you can focus on growing your business.</p>
-                <button class="hero-cta">Get Free Consultation</button>
-            </div>
-            <div class="hero-image">
-                <div style="width: 100%; height: 500px; background: rgba(255,255,255,0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">
-                    <img src="./assets/heroimg.webp" alt="">
-                </div>
-            </div>
+<main>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="pill">Websites from $200 · Birmingham, AL</span>
+        <h1 class="display">Your brand and website, built fast. Priced fair.</h1>
+        <p>I use a tuned, AI-assisted design process to build brands and websites in a fraction of the usual time — so small businesses get a professional site without the agency price tag.</p>
+        <div class="actions">
+          <a class="btn btn-accent" href="#contact">Start your site</a>
+          <a class="btn btn-outline" href="#pricing">See pricing</a>
         </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats fade-in">
-        <div class="stats-container">
-            <div class="section-label">WHO WE ARE</div>
-            <h2 class="stats-title">We're digital marketing experts who help local businesses thrive online—without the tech headaches.</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Years Experience</div>
-                    <p class="stat-description">A decade of design expertise helping businesses establish powerful digital presences.</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Projects Completed</div>
-                    <p class="stat-description">From real estate to trades, we've built websites that actually work for growing businesses.</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">Client Satisfaction</div>
-                    <p class="stat-description">Our clients love that we're responsive, honest, and genuinely invested in their success.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services fade-in" id="services">
-        <div class="services-container">
-            <div class="services-header">
-                <div class="section-label">OUR SERVICES</div>
-                <h2 class="services-title">What we do for local businesses</h2>
-            </div>
-
-            <div class="services-layout">
-                <!-- Service Navigation - Left Side -->
-                <div class="service-nav">
-                    <button class="service-nav-button active" data-service="design">Web Design & Development</button>
-                    <button class="service-nav-button" data-service="seo">AI-Powered SEO Automation</button>
-                    <button class="service-nav-button" data-service="marketing">Email & SMS Marketing</button>
-                    <button class="service-nav-button" data-service="content">Content Creation & Social Media</button>
-                    <button class="service-nav-button" data-service="development">Full-Stack Development</button>
-                    <button class="service-nav-button" data-service="media">Professional Media Production</button>
-                </div>
-
-                <!-- Service Panels - Right Side -->
-                <div class="service-panels">
-                    <div id="design" class="service-panel active">
-                        <div class="service-content-wrapper">
-                            <div class="service-icon">💻</div>
-                            <h3>Smart Website Design & Development</h3>
-                            <p>Beautiful, mobile-responsive websites built with professional-grade tools like Figma, Replit, and Adobe Creative Suite. We craft pixel-perfect digital experiences that capture leads and showcase your business 24/7.</p>
-                            <ul class="service-features">
-                                <li>Custom website design tailored to your brand</li>
-                                <li>Built-in appointment booking systems</li>
-                                <li>Lead capture forms and landing pages</li>
-                                <li>Mobile-responsive and fast-loading</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="seo" class="service-panel">
-                        <div class="service-content-wrapper">
-                            <div class="service-icon">📊</div>
-                            <h3>AI-Powered SEO Automation</h3>
-                            <p>Using Search Atlas's award-winning OTTO AI, your website automatically optimizes itself for search engines—no manual updates needed. Save 10+ hours per week on SEO tasks while boosting your rankings.</p>
-                            <ul class="service-features">
-                                <li>Automated technical fixes and optimizations</li>
-                                <li>5.2 billion keyword database access</li>
-                                <li>Real-time content and meta tag updates</li>
-                                <li>Local SEO optimization for your area</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="marketing" class="service-panel">
-                        <div class="service-content-wrapper">
-                            <div class="service-icon">📧</div>
-                            <h3>Automated Campaign Management</h3>
-                            <p>Multi-channel email and SMS campaigns that nurture leads while you sleep. Connect with customers across multiple channels without lifting a finger.</p>
-                            <ul class="service-features">
-                                <li>Multi-channel campaign automation</li>
-                                <li>Personalized follow-up sequences</li>
-                                <li>Email template design</li>
-                                <li>Performance tracking and analytics</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="content" class="service-panel">
-                        <div class="service-content-wrapper">
-                            <div class="service-icon">🎨</div>
-                            <h3>Brand Identity & Visual Content</h3>
-                            <p>Complete brand development from logo design to photography and videography. We create cohesive visual identities and scroll-stopping content that tells your brand story across every platform.</p>
-                            <ul class="service-features">
-                                <li>Professional photo and video capture</li>
-                                <li>Custom graphics and branded materials</li>
-                                <li>Social media content calendars</li>
-                                <li>On-brand visual storytelling</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="development" class="service-panel">
-                        <div class="service-content-wrapper">
-                            <div class="service-icon">⚙️</div>
-                            <h3>Full-Stack Development</h3>
-                            <p>Advanced web solutions built with modern development platforms like Replit and GoHighLevel. From custom booking systems to complex integrations—we build it right.</p>
-                            <ul class="service-features">
-                                <li>Custom functionality and integrations</li>
-                                <li>Built on GoHighLevel platform</li>
-                                <li>Professional development tools (Replit, Figma)</li>
-                                <li>Scalable and maintainable code</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="media" class="service-panel">
-                        <div class="service-content-wrapper">
-                            <div class="service-icon">📸</div>
-                            <h3>Professional Media Production</h3>
-                            <p>In-house photography and videography services that showcase your business authentically. No stock photos—just real, compelling content that connects with your customers.</p>
-                            <ul class="service-features">
-                                <li>Professional photography services</li>
-                                <li>Video production and editing</li>
-                                <li>Adobe Creative Suite expertise</li>
-                                <li>Authentic brand storytelling</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section class="case-studies fade-in" id="case-studies">
-        <div class="case-studies-container">
-            <div class="case-studies-header">
-                <div class="section-label" style="color: rgba(255,255,255,0.8);">CASE STUDIES</div>
-                <h2 class="case-studies-title">Recent projects helping local businesses succeed</h2>
-            </div>
-            <div class="case-studies-grid">
-                <div class="case-study-card">
-                    <div class="case-study-image">
-                        <img src="./assets/raysrealtygroup.png" alt="">
-                    </div>
-                    <h3>Ray's Realty Group</h3>
-                    <p>Building a lead-generating website for a thriving real estate agency. We created an intuitive property showcase with automated lead capture and appointment scheduling that works 24/7.</p>
-                </div>
-                <div class="case-study-card">
-                    <div class="case-study-image">
-                        <img src="./assets/truckrHaul.png" alt="">
-                    </div>
-                    <h3>TruckrHaul Logistics</h3>
-                    <p>Designed a professional, compliance-friendly website for a local freight Logistics company. Clean design meets powerful automation to capture qualified loads and track freight effortlessly.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing fade-in" id="pricing">
-        <div class="pricing-container">
-            <div class="pricing-header">
-                <div class="section-label">PRICING PLANS</div>
-                <h2 class="pricing-title">Transparent Pricing Built For Growing Businesses</h2>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter Site</h3>
-                    <p class="subtitle">Single-page site</p>
-                    <div class="price">$999</div>
-                    <p class="price-note">One-time fee</p>
-                    <ul class="pricing-features">
-                        <li>Keyword Research</li>
-                        <li>Responsive website design</li>
-                        <li>Basic SEO setup</li>
-                        <li>Mobile optimization</li>
-                    </ul>
-                    <p class="pricing-description">Small businesses or startups looking to establish a clean online presence.</p>
-                    <button class="pricing-cta">Choose This Plan</button>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Recommended</div>
-                    <h3>Standard Site</h3>
-                    <p class="subtitle">5-page website</p>
-                    <div class="price">$2,199</div>
-                    <p class="price-note">One-time fee</p>
-                    <ul class="pricing-features">
-                        <li>Keyword Research</li>
-                        <li>Responsive website design</li>
-                        <li>Full SEO automation with Search Atlas</li>
-                        <li>Email campaign integration</li>
-                        <li>Appointment/booking system setup</li>
-                        <li>1 month of support & training</li>
-                    </ul>
-                    <p class="pricing-description">Small businesses who want to leverage AI-powered marketing automation to capture more leads.</p>
-                    <button class="pricing-cta">Choose This Plan</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Pro Site</h3>
-                    <p class="subtitle">Premium 8+ page site</p>
-                    <div class="price">$3,499</div>
-                    <p class="price-note">One-time fee</p>
-                    <ul class="pricing-features">
-                        <li>Keyword Research</li>
-                        <li>Responsive website design</li>
-                        <li>Advanced SEO & AI optimization</li>
-                        <li>Multi-channel marketing automation</li>
-                        <li>Custom graphics & social content</li>
-                        <li>Video/photo capture services</li>
-                        <li>Priority support & training</li>
-                        <li>3 months of ongoing optimization</li>
-                    </ul>
-                    <p class="pricing-description">Small businesses who want a complete, turnkey digital marketing solution with ongoing optimization.</p>
-                    <button class="pricing-cta">Choose This Plan</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq fade-in">
-        <div class="faq-container">
-            <div class="faq-header">
-                <h2 class="faq-title">Frequently Asked Questions</h2>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>What makes helloWebb different from other web designers?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        We're not just web designers—we're full-stack developers and creative professionals. With 10+ years of experience using professional tools like Figma, Adobe Creative Suite, and Replit, we bring enterprise-level expertise to local businesses. We combine custom development, brand identity design, photography, videography, and AI-powered automation that most agencies don't offer. Instead of just building a pretty website, we create complete digital systems using GoHighLevel and Search Atlas that automate your SEO, lead capture, and client communication. Plus, we specialize in local businesses (0-50 employees) and price our services fairly—no corporate markup or hidden fees.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>How long does it take to build my website?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Timeline depends on the package you choose. Starter Sites typically take 1-2 weeks, Standard Sites take 2-3 weeks, and Pro Sites with advanced automation, custom development, and professional content creation take 3-4 weeks. Unlike traditional agencies that take months, our streamlined workflow and AI-enhanced tools let us deliver professional results faster without compromising quality. We'll give you a specific timeline during your free consultation based on your unique needs.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Do you offer ongoing support after my website launches?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Absolutely! All packages include initial training and support. Standard Sites include 1 month of post-launch support, and Pro Sites include 3 months of ongoing optimization. After that, we offer flexible monthly maintenance plans for updates, content changes, SEO monitoring, and technical support. We're here to help your business succeed long-term—not just hand you a website and disappear. You'll always be able to reach us when you need assistance.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>What exactly is AI-powered SEO automation?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Traditional SEO requires constant manual updates—fixing broken links, updating meta tags, optimizing images, and monitoring rankings. Our Search Atlas integration uses OTTO AI to automatically detect and fix these issues in real-time. It's like having a full-time SEO specialist working on your site 24/7. The system monitors your rankings, analyzes competitors, optimizes your content, and makes technical improvements automatically—typically saving business owners 10+ hours per week on tasks that would otherwise require a specialist.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Do you provide photography and video services?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Yes! We offer professional photography and videography as part of our Pro Site package or as standalone services. We capture authentic photos and videos of your business, team, and work—no cheesy stock imagery. This includes product photography, team headshots, facility tours, and promotional videos. We handle everything from shooting to editing using professional Adobe Creative Suite tools, giving you high-quality content that actually represents your brand and connects with your local audience.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>helloWebb</h3>
-                    <p>We build AI-powered websites that work as hard as you do. 10+ years of expertise helping local businesses thrive online.</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/niki-beck-49bb80b8/">in</a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#case-studies">Case Studies</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>(205) 881-3102</p>
-                    <p>niki@wearehamburger.com</p>
-                    <p>Birmingham, Alabama</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Have Questions?</h3>
-                    <a href="mailto:niki@wearehamburger.com" class="general-email">
-                    Email Me
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Copyright © 2025, helloWebb. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Contact Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="closeModal">&times;</button>
-            <div class="modal-header">
-                <h2>Let's Work Together</h2>
-                <p>Tell us about your project and I'll get back to you within 24 hours.</p>
-            </div>
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe">
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="john@example.com">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(205) 555-0123">
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="business">Business Name</label>
-                    <input type="text" id="business" name="business" placeholder="Your Business Name">
-                </div>
-                
-                <div class="form-group">
-                    <label for="package">Interested In</label>
-                    <select id="package" name="package">
-                        <option value="">Select a package</option>
-                        <option value="starter">Starter Site - $999</option>
-                        <option value="standard">Standard Site - $2,199</option>
-                        <option value="pro">Pro Site - $3,499</option>
-                        <option value="consultation">Free Consultation</option>
-                        <option value="other">Other Services</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Tell Us About Your Project *</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Share your goals, timeline, and any specific requirements..."></textarea>
-                </div>
-
-                 <div class="g-recaptcha" data-sitekey="6LefGTMsAAAAAFMVTmV8ojXV5d8T4Yxu9E9oC5Z4"></div>
-                
-                <button type="submit" class="form-submit">
-                    <span>Send Message</span>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M4.16667 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                
-                <p class="form-note">We respect your privacy and will never share your information.</p>
-            </form>
-        </div>
+      </div>
+      <aside class="price-card" aria-label="Pricing summary">
+        <p class="label">Simple pricing</p>
+        <div class="price-row"><span>Single-page site</span><strong>$200</strong></div>
+        <div class="price-row"><span>Multi-page site</span><strong>$550</strong></div>
+        <div class="price-row"><span>Something bigger</span><em>Custom quote</em></div>
+      </aside>
     </div>
+  </section>
 
-    <script src="index.js"></script>
+  <!-- Two ways to build -->
+  <section class="section soft">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Two ways to build</p>
+        <h2 class="display h2">Pick what fits how you want to run your site.</h2>
+      </div>
+      <div class="grid">
+        <div class="option">
+          <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0E0E10" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18"/><path d="M8 21h8"/></svg>
+          <h3 class="display">On a website platform</h3>
+          <p>I build your site on a hosting platform like Squarespace or Wix. You get an easy editor to update text, photos and hours yourself — no code, no calling me for small changes.</p>
+          <p class="best"><strong>Best for:</strong> owners who want to make their own edits. Platform plan billed by the platform.</p>
+        </div>
+        <div class="option">
+          <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0E0E10" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></svg>
+          <h3 class="display">Custom-coded &amp; hosted by me</h3>
+          <p>I hand-build a fast, lightweight site in code and host it for you at a very low monthly cost — far less than most platform subscriptions. Need a change? Send me a note.</p>
+          <p class="best"><strong>Best for:</strong> the lowest ongoing cost. Hosting from [$X/month].</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">How it works</p>
+        <h2 class="display h2">AI handles the busywork. A senior designer handles the decisions.</h2>
+        <p class="lede">My process uses AI to move through branding, copy and build steps quickly — then I review, refine and polish every page by hand. You get speed without a template look.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span>01</span><h3>Quick brief</h3><p>A short call or form about your business, customers and what the site needs to do.</p></div>
+        <div class="step"><span>02</span><h3>Brand direction</h3><p>I put together a few visual directions — colors, type, tone. You pick the one that feels right.</p></div>
+        <div class="step"><span>03</span><h3>Build &amp; review</h3><p>I build the site, write or tighten the copy, and send it to you for a round of feedback.</p></div>
+        <div class="step"><span>04</span><h3>Launch</h3><p>We connect your domain and go live — typically within [X days] of kickoff.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section dark" id="pricing">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Pricing</p>
+        <h2 class="display h2">Flat prices. No surprises.</h2>
+        <p class="lede">One-time project fee. Platform subscriptions or my hosting are separate and billed monthly.</p>
+      </div>
+      <div class="grid">
+        <div class="tier">
+          <h3>Single page</h3>
+          <p class="display amount">$200</p>
+          <p class="desc">A clean one-page site that tells people who you are and how to reach you.</p>
+          <ul>
+            <li>One scrolling page, mobile-friendly</li>
+            <li>Contact form or booking link</li>
+            <li>Basic SEO setup</li>
+            <li>[What else is included]</li>
+          </ul>
+          <a class="btn btn-white" href="#contact">Get started</a>
+        </div>
+        <div class="tier featured">
+          <div class="tier-top"><h3>Multi-page</h3><span class="tag">Most popular</span></div>
+          <p class="display amount">$550</p>
+          <p class="desc">A full site with room for services, about, gallery and contact pages.</p>
+          <ul>
+            <li>Up to [X] pages, mobile-friendly</li>
+            <li>Brand direction (colors, type, logo cleanup)</li>
+            <li>Contact form or booking integration</li>
+            <li>Basic SEO setup</li>
+          </ul>
+          <a class="btn btn-ink" href="#contact">Get started</a>
+        </div>
+        <div class="tier">
+          <h3>Custom</h3>
+          <p class="display amount sm">Quoted per project</p>
+          <p class="desc">For anything beyond a standard site. You get a clear quote before any work starts.</p>
+          <ul>
+            <li>Online stores &amp; payments</li>
+            <li>Custom features or integrations</li>
+            <li>Full brand identity work</li>
+            <li>Larger content builds</li>
+          </ul>
+          <a class="btn btn-white" href="#contact">Request a quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Recent work</p>
+        <h2 class="display h2">Sites for Birmingham-area businesses.</h2>
+      </div>
+      <div class="work-grid">
+        <!-- Replace each .thumb placeholder with <img src="..." alt="..."> and set href to the live site -->
+        <a class="work-card" href="#">
+          <div class="thumb">[Site screenshot]</div>
+          <h3>Overhead Door Co. of Birmingham</h3>
+          <p>Full service site with a built-in AI chat assistant, reviews and a quote request form.</p>
+        </a>
+        <a class="work-card" href="#">
+          <div class="thumb">[Site screenshot]</div>
+          <h3>Tiger Mechanical Service</h3>
+          <p>Bold, industrial single-page site for an HVAC and mechanical contractor.</p>
+        </a>
+        <a class="work-card" href="#">
+          <div class="thumb">[Site screenshot]</div>
+          <h3>Soma Therapy Massage</h3>
+          <p>Calm, warm brand and site with online booking built in.</p>
+        </a>
+        <a class="work-card" href="#">
+          <div class="thumb">[Site screenshot]</div>
+          <h3>Ray's Realty Group</h3>
+          <p>Property management site redesign focused on clear listings and easy contact.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section soft about">
+    <div class="wrap">
+      <div class="photo">[Your photo]</div>
+      <div class="about-copy">
+        <p class="eyebrow">Who you'll work with</p>
+        <h2 class="display">Hi, I'm Niki.</h2>
+        <p>By day I'm a senior UI/UX designer working on product design and design systems. On the side, I help local businesses get online — fast and affordably. You work directly with me from first call to launch, no account managers in between.</p>
+        <a href="https://www.linkedin.com/in/niki-beck-49bb80b8/">Connect on LinkedIn →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap faq">
+      <h2 class="display h2" style="margin-bottom:32px">Questions</h2>
+      <details open>
+        <summary>How can you charge so little?</summary>
+        <p>My AI-assisted process cuts out the slow, repetitive parts of design and development. That time savings goes to you as a lower price — every page still gets reviewed and refined by me.</p>
+      </details>
+      <details>
+        <summary>How fast is “fast”?</summary>
+        <p>Most single-page sites launch within [X days] and multi-page sites within [X days], depending on how quickly we trade feedback and content.</p>
+      </details>
+      <details>
+        <summary>Platform or custom code — which should I choose?</summary>
+        <p>If you want to edit the site yourself, a platform is the easiest route. If you want the lowest monthly cost and are happy to send me changes, custom code with my hosting is the better deal.</p>
+      </details>
+      <details>
+        <summary>What counts as a custom project?</summary>
+        <p>Online stores, custom features, integrations with other tools, full brand identity work, or larger sites. I'll send a clear quote before any work begins.</p>
+      </details>
+      <details>
+        <summary>Do I own my website?</summary>
+        <p>Yes. Your content, domain and design are yours. [Confirm your ownership and handoff terms.]</p>
+      </details>
+      <details>
+        <summary>What do you need from me to start?</summary>
+        <p>Your logo if you have one, a few photos, and the basics about your business. Missing something? I can help create it.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section dark contact" id="contact">
+    <div class="wrap">
+      <div class="contact-copy">
+        <h2 class="display">Let's get your site live.</h2>
+        <p class="lede">Tell me a little about your business and I'll reply within 24 hours with next steps.</p>
+        <div class="contact-info">
+          <a href="tel:+12058813102">(205) 881-3102</a>
+          <a href="mailto:niki@wearehamburger.com">niki@wearehamburger.com</a>
+          <span>Birmingham, Alabama</span>
+        </div>
+      </div>
+      <form id="contactForm">
+        <label>Name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>Business name
+          <input type="text" name="business" autocomplete="organization">
+        </label>
+        <label>I'm interested in
+          <select name="package">
+            <option>Single-page site — $200</option>
+            <option>Multi-page site — $550</option>
+            <option>Custom project — quote</option>
+            <option>Not sure yet</option>
+          </select>
+        </label>
+        <label class="full">Tell me about your project
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <div class="full g-recaptcha" data-sitekey="6LefGTMsAAAAAFMVTmV8ojXV5d8T4Yxu9E9oC5Z4" data-theme="dark"></div>
+        <button class="full" type="submit">Send message</button>
+        <p class="full form-status" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="dark">
+  <div class="wrap">
+    <span>© 2026 helloWebb</span>
+    <span>Fast, affordable websites for small businesses</span>
+  </div>
+</footer>
+
+<script>
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = contactForm.querySelector('.form-status');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    formStatus.hidden = true;
+
+    try {
+      await emailjs.send('service_3v1spb8', 'template_kd09924', {
+        name: contactForm.name.value,
+        email: contactForm.email.value,
+        business: contactForm.business.value,
+        package: contactForm.package.value,
+        message: contactForm.message.value,
+        'g-recaptcha-response': grecaptcha.getResponse(),
+      });
+      contactForm.reset();
+      grecaptcha.reset();
+      formStatus.textContent = "Thanks! Your message is on its way — I'll reply within 24 hours.";
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      formStatus.textContent = 'Something went wrong. Please try again, or email niki@wearehamburger.com.';
+    } finally {
+      formStatus.hidden = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+    }
+  });
+</script>
+
 </body>
 </html>
