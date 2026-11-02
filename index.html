@@ -110,6 +110,8 @@
   .work-card:hover { color: var(--ink); }
   .thumb { aspect-ratio: 4 / 3; background: var(--soft); border: 1px dashed var(--muted-dark); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #6B6B75; font-size: 14px; overflow: hidden; }
   .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .thumb:has(img) { border: 1px solid var(--line); background: var(--white); }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
   .work-card h3 { margin: 0; font-size: 20px; font-weight: 600; }
   .work-card p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--muted); }
 
@@ -256,8 +258,7 @@
           <ul>
             <li>One scrolling page, mobile-friendly</li>
             <li>Contact form or booking link</li>
-            <li>Basic SEO setup</li>
-            <li>[What else is included]</li>
+            <li>Basic domain integration</li>
           </ul>
           <a class="btn btn-white" href="#contact">Get started</a>
         </div>
@@ -266,7 +267,7 @@
           <p class="display amount">$550</p>
           <p class="desc">A full site with room for services, about, gallery and contact pages.</p>
           <ul>
-            <li>Up to [X] pages, mobile-friendly</li>
+            <li>Up to 5 pages, mobile-friendly</li>
             <li>Brand direction (colors, type, logo cleanup)</li>
             <li>Contact form or booking integration</li>
             <li>Basic SEO setup</li>
@@ -297,26 +298,20 @@
         <h2 class="display h2">Sites for Birmingham-area businesses.</h2>
       </div>
       <div class="work-grid">
-        <!-- Replace each .thumb placeholder with <img src="..." alt="..."> and set href to the live site -->
         <a class="work-card" href="#">
-          <div class="thumb">[Site screenshot]</div>
+          <div class="thumb"><img src="assets/overhead.jpg" alt="Overhead Door Co. of Birmingham website homepage" loading="lazy"></div>
           <h3>Overhead Door Co. of Birmingham</h3>
           <p>Full service site with a built-in AI chat assistant, reviews and a quote request form.</p>
         </a>
         <a class="work-card" href="#">
-          <div class="thumb">[Site screenshot]</div>
+          <div class="thumb"><img src="assets/tiger.jpg" alt="Tiger Mechanical Service website homepage" loading="lazy"></div>
           <h3>Tiger Mechanical Service</h3>
           <p>Bold, industrial single-page site for an HVAC and mechanical contractor.</p>
         </a>
         <a class="work-card" href="#">
-          <div class="thumb">[Site screenshot]</div>
+          <div class="thumb"><img src="assets/soma.jpg" alt="Soma Therapy Massage website homepage" loading="lazy"></div>
           <h3>Soma Therapy Massage</h3>
           <p>Calm, warm brand and site with online booking built in.</p>
-        </a>
-        <a class="work-card" href="#">
-          <div class="thumb">[Site screenshot]</div>
-          <h3>Ray's Realty Group</h3>
-          <p>Property management site redesign focused on clear listings and easy contact.</p>
         </a>
       </div>
     </div>
@@ -325,7 +320,7 @@
   <!-- About -->
   <section class="section soft about">
     <div class="wrap">
-      <div class="photo">[Your photo]</div>
+      <div class="photo"><img src="assets/niki.jpg" alt="Niki Beck, founder of helloWebb" loading="lazy"></div>
       <div class="about-copy">
         <p class="eyebrow">Who you'll work with</p>
         <h2 class="display">Hi, I'm Niki.</h2>
