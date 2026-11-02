@@ -420,6 +420,11 @@
 
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (!grecaptcha.getResponse()) {
+      formStatus.textContent = 'Please tick "I\'m not a robot" before sending.';
+      formStatus.hidden = false;
+      return;
+    }
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
@@ -438,7 +443,8 @@
       grecaptcha.reset();
       formStatus.textContent = "Thanks! Your message is on its way — I'll reply within 24 hours.";
     } catch (err) {
-      console.error('EmailJS error:', err);
+      console.error('EmailJS error:', err.status, err.text || err);
+      grecaptcha.reset();
       formStatus.textContent = 'Something went wrong. Please try again, or email niki@wearehamburger.com.';
     } finally {
       formStatus.hidden = false;
